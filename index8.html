@@ -1,0 +1,326 @@
+<html>
+<head>
+<title>Sumadores</title>
+</head>
+<body background="imagen10.jpg">
+  <br>
+  <center>
+  <h1> ¡¡¡Sumadores!!!</h1>
+  </center>
+<p>  Un sumador es un circuito que realiza la suma de dos palabras binarias. Es distinta de la operación OR, con la que no nos debemos confundir. La operación suma de números binarios tiene la misma mecánica que la de números decimales.</p>
+
+<p>Por lo que en la suma de números binarios con dos o más bits, puede ocurrir el mismo caso que podemos encontrar en la suma de números decimales con varias cifras: cuando al sumar los dos primeros dígitos se obtiene una cantidad mayor de 9, se da como resultado el dígito de menor peso y “me llevo" el anterior a la siguiente columna, para sumarlo allí.</p>
+
+<p>En la suma binaria de los dígitos 1 + 1, el resultado es 0 y me llevo 1, que debo sumar en la columna siguiente y pudiéndose escribir 10, solamente cuando sea la última columna a sumar. A este bit más significativo de la operación de sumar, se le conoce en inglés como carry (acarreo), equivalente al “me llevo una” de la suma decimal.</p>
+<p><b>tipos de sumadores</b></p>
+<p>"semisumador"</p>
+<p>Se denomina semisumador al circuito combinacional capaz de realizar la suma aritmética binaria de dos únicos bits y dar como resultado la suma de ambos y el acarreo. La tabla de verdad correspondiente a esta operación sería:</p>
+<br>
+
+
+
+<table align="center" border="1">
+
+	<tbody>
+
+		<tr>
+
+			<td colspan="2"> Entradas</td>
+
+			<td colspan="2">Salidas <br>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center">A <br>
+
+			</td>
+
+			<td align="center">B </td>
+
+			<td align="center">C</td>
+
+			<td align="center">S </td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center">0</td>
+
+			<td align="center">0</td>
+
+			<td align="center">0</td>
+
+			<td align="center">0</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center">0<br>
+
+			</td>
+
+			<td align="center">1</td>
+
+			<td align="center">0</td>
+
+			<td align="center">1<br>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center">1</td>
+
+			<td align="center">0</td>
+
+			<td align="center">0</td>
+
+			<td align="center">1</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center">1</td>
+
+			<td align="center">1 </td>
+
+			<td align="center">1</td>
+
+			<td align="center">0</td>
+
+		</tr>
+
+	</tbody>
+
+</table>
+
+<p>
+
+Con lo que sus funciones
+
+canónicas serán:</p>
+
+
+<center>  <img src="sumador.png"> </center>
+
+<p> Que una vez implementado con puertas lógicas, un semisumador tendría el circuito:</p>
+
+<center>  <img src="sumador1.jpeg"> </center>
+<p>Sumador completo. Presenta tres entradas, dos correspondientes a los dos bits que se van a sumar y una tercera con el acarreo de la suma anterior. Y tiene dos salidas, el resultado de la suma y el acarreo producido. Su tabla de verdad será:</p>
+
+
+
+
+
+<p>
+
+&nbsp;
+
+</p>
+
+<table align="center" border="1">
+
+	<tbody>
+
+		<tr>
+
+			<td colspan="3" align="center">
+
+			<p>
+
+			Entradas
+
+			</p>
+
+			</td>
+
+			<td colspan="2" align="center"> Salidas</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> A</td>
+
+			<td align="center">B <br>
+
+			</td>
+
+			<td align="center">C<sup>-1 </sup></td>
+
+			<td align="center">C </td>
+
+			<td align="center">S </td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> 0</td>
+
+			<td align="center"> 0</td>
+
+			<td align="center">0</td>
+
+			<td align="center"> 0</td>
+
+			<td align="center">0 </td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> 0</td>
+
+			<td align="center"> 0</td>
+
+			<td align="center">1<br>
+
+			</td>
+
+			<td align="center"> 0</td>
+
+			<td align="center">1 </td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> 0</td>
+
+			<td align="center"> 1</td>
+
+			<td align="center">0</td>
+
+			<td align="center"> 0</td>
+
+			<td align="center">1 </td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> 0</td>
+
+			<td align="center"> 1</td>
+
+			<td align="center">1</td>
+
+			<td align="center"> 1</td>
+
+			<td align="center">0 </td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> 1</td>
+
+			<td align="center"> 0</td>
+
+			<td align="center">0</td>
+
+			<td align="center"> 0</td>
+
+			<td align="center"> 1</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> 1</td>
+
+			<td align="center"> 0</td>
+
+			<td align="center">1</td>
+
+			<td align="center"> 1</td>
+
+			<td align="center"> 0</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> 1</td>
+
+			<td align="center"> 1</td>
+
+			<td align="center">0</td>
+
+			<td align="center"> 1</td>
+
+			<td align="center"> 0</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> 1</td>
+
+			<td align="center"> 1</td>
+
+			<td align="center">1</td>
+
+			<td align="center"> 1</td>
+
+			<td align="center"> 0</td>
+
+		</tr>
+
+	</tbody>
+
+</table>
+
+
+<p>Sus funciones canónicas serán:</p>
+
+<center>  <img src="sumador2.gif"> </center>
+<p> Que una vez simplificadas quedarían:</p>
+<center>  <img src="sumador4.gif"> </center>
+<center>  <img src="sumador3.gif"> </center>
+
+<p>O bien:</p>
+<center>  <img src="sumador5.gif"> </center>
+<br>
+<br>
+<br>
+<p><b> -los siguientes videos ayudaran a entender mejor el tema</b></p>
+<br>
+<br>
+
+<center>
+  <iframe width="692" height="392" src="https://www.youtube.com/embed/HiCbt2EIBqU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <br>
+  <br>
+  <iframe width="692" height="392" src="https://www.youtube.com/embed/YY1bvULtcJM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <br>
+  <br>
+  <iframe width="692" height="392" src="https://www.youtube.com/embed/-hQlUOp1--U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+  </html>
